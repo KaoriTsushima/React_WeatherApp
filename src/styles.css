@@ -9,6 +9,9 @@
 .App h1 {
   font-size: 38pt;
 }
+.App footer {
+  font-size: 18pt;
+}
 .Weather h2 {
   font-size: 30pt;
 }
