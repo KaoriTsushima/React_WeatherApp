@@ -9,14 +9,18 @@ export default function Weather(props) {
 
     return (
       <>
-        <h2>Selected city is {props.weatherData.name}</h2>
         <div className="Weather">
-          <ul>
-            <li>Temperature: {Math.round(temp)}℃</li>
-            <li>Description: {description}</li>
-            <li>Wind: {Math.round(wind)} mph</li>
-            <li>Humidity: {humidity} %</li>
-          </ul>
+          <div className="grid-container">
+            <div className="col">
+              <h2> {props.weatherData.name}</h2>
+              <h3>Temperature: {Math.round(temp)}℃</h3>
+            </div>
+            <div className="col">
+              <p>Description: {description}</p>
+              <p>Wind: {Math.round(wind)} mph</p>
+              <p>Humidity: {humidity} %</p>
+            </div>
+          </div>
         </div>
       </>
     );

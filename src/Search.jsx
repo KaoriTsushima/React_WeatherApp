@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Weather from "./Weather";
+import Forecast from "./Forecast";
 import axios from "axios";
 
 export default function Search() {
@@ -25,8 +26,11 @@ export default function Search() {
         <input type="search" placeholder="type city" onChange={updateCity} />
         <button type="submit">Search</button>
       </form>
+      <p>16 Aug 2023 09:50:00</p>
 
       <Weather weatherData={weatherData} />
+      <hr />
+      <Forecast />
     </div>
   );
 }
