@@ -1,0 +1,11 @@
+.Weather h2 {
+  font-size: 30pt;
+}
+.Weather h3 {
+  font-size: 20pt;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}

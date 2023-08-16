@@ -1,4 +1,5 @@
 import React from "react";
+import "./Forecast.css";
 import { WiDaySunny } from "weather-icons-react";
 export default function Forecast() {
   let forecasts = [
@@ -31,21 +32,15 @@ export default function Forecast() {
   return (
     <div className="Forecast">
       <div className="grid-forecast-container">
-        <div className="grid-forecast-contents">
-          {forecasts.map(function (forecast, index) {
-            return (
-              <div key={index}>
-                <p>
-                  {forecast.day}
-                  <br />
-                  {forecast.icon}
-                  <br />
-                  {forecast.temp}
-                </p>
-              </div>
-            );
-          })}
-        </div>
+        {forecasts.map(function (forecast, index) {
+          return (
+            <div key={index}>
+              <h3>{forecast.day}</h3>
+              <p>{forecast.icon}</p>
+              <p> {forecast.temp}</p>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
