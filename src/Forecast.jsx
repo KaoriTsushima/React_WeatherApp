@@ -1,31 +1,32 @@
 import React from "react";
 import "./Forecast.css";
-import { WiDaySunny } from "weather-icons-react";
+import { WiCloud, WiDaySunny, WiRain } from "weather-icons-react";
+
 export default function Forecast() {
   let forecasts = [
     {
       day: "Day1",
-      icon: "☁️",
+      icon: <WiDaySunny size={50} color="orange" />,
       temp: "High:20℃ Low: 10℃",
     },
     {
       day: "Day2",
-      icon: "☁️",
+      icon: <WiCloud size={50} color="gray" />,
       temp: "High:20℃ Low: 10℃",
     },
     {
       day: "Day3",
-      icon: "☁️",
+      icon: <WiRain size={50} color="blue" />,
       temp: "High:20℃ Low: 10℃",
     },
     {
       day: "Day4",
-      icon: "☁️",
+      icon: <WiRain size={50} color="blue" />,
       temp: "High:20℃ Low: 10℃",
     },
     {
       day: "Day5",
-      icon: "☁️",
+      icon: <WiRain size={50} color="blue" />,
       temp: "High:20℃ Low: 10℃",
     },
   ];

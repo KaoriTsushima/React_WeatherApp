@@ -17,6 +17,10 @@ export default function Weather(props) {
               <h3>Temperature: {Math.round(temp)}℃</h3>
             </div>
             <div className="col">
+              <img
+                height={200}
+                src={`https://openweathermap.org/img/wn/${props.weatherData.weather[0].icon}@2x.png`}
+              />
               <p>Description: {description}</p>
               <p>Wind: {Math.round(wind)} mph</p>
               <p>Humidity: {humidity} %</p>
