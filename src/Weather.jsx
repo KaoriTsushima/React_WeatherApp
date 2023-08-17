@@ -1,5 +1,6 @@
 import React from "react";
 import "./Weather.css";
+import FormatDate from "./FormatDate";
 
 export default function Weather(props) {
   if (props.weatherData) {
@@ -7,10 +8,11 @@ export default function Weather(props) {
     const description = props.weatherData.weather[0].description;
     const wind = props.weatherData.wind.speed;
     const humidity = props.weatherData.main.humidity;
-
+    let date = new Date(props.weatherData.dt * 1000);
     return (
       <>
         <div className="Weather">
+          <FormatDate date={date} />
           <div className="grid-container">
             <div className="col">
               <h2> {props.weatherData.name}</h2>

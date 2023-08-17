@@ -9,7 +9,7 @@ export default function Search() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
+    let apiKey = "281450ec88936f4fa8ee9864682b49a0";
     let units = "metric";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
 
@@ -26,7 +26,6 @@ export default function Search() {
         <input type="search" placeholder="type city" onChange={updateCity} />
         <button type="submit">Search</button>
       </form>
-      <p>16 Aug 2023 09:50:00</p>
 
       <Weather weatherData={weatherData} />
       <hr />
