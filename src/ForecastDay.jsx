@@ -1,4 +1,5 @@
 import React from "react";
+import "./ForecastDay.css";
 export default function ForecastDay(props) {
   const maxTemp = `${Math.round(props.dailyForecast.temp.max)} ℃`;
   const minTemp = `${Math.round(props.dailyForecast.temp.min)} ℃`;
@@ -23,6 +24,7 @@ export default function ForecastDay(props) {
       />
       <div className="Forecast-temperatures">
         <span className="Forecast-temperature-max">{maxTemp}</span>
+        <span> / </span>
         <span className="Forecast-temperature-min">{minTemp}</span>
       </div>
     </div>

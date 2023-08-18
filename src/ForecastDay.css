@@ -1,0 +1,10 @@
+.Forecast-day {
+  font-size: 18pt;
+}
+.Forecast-temperature-max {
+  font-weight: bold;
+}
+.Forecast-temperature-min {
+  font-weight: bold;
+  opacity: 0.6;
+}
