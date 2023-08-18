@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Weather from "./Weather";
+import Forecast from "./Forecast";
 import axios from "axios";
 
 export default function Search() {
@@ -28,7 +29,7 @@ export default function Search() {
 
       <Weather weatherData={weatherData} />
       <hr />
-      {/*<Forecast />*/}
+      <Forecast coordinates={weatherData?.coord} />
     </div>
   );
 }
