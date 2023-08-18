@@ -1,6 +1,7 @@
 import React from "react";
 import "./Weather.css";
 import FormatDate from "./FormatDate";
+import MainTemperature from "./MainTemperature";
 
 export default function Weather(props) {
   if (props.weatherData) {
@@ -16,7 +17,7 @@ export default function Weather(props) {
           <div className="grid-container">
             <div className="col">
               <h2> {props.weatherData.name}</h2>
-              <h3>Temperature: {Math.round(temp)}℃</h3>
+              <MainTemperature ctemp={temp} />
             </div>
             <div className="col">
               <img
