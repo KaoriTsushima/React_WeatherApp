@@ -33,12 +33,12 @@ export default function MainTemperature(props) {
       <div className="MainTemperature">
         <h3>
           {Math.round(fTempConversion())}
-          <p className="unit">
+          <span className="unit">
             <a href="/" onClick={showCtemp}>
               ℃{" "}
             </a>
             / F
-          </p>
+          </span>
         </h3>
       </div>
     );

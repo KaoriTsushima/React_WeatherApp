@@ -29,7 +29,7 @@ export default function Search() {
 
       <Weather weatherData={weatherData} />
       <hr />
-      <Forecast />
+      {/*<Forecast />*/}
     </div>
   );
 }
