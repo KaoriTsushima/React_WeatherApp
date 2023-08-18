@@ -4,28 +4,27 @@ import ForecastDay from "./ForecastDay";
 import axios from "axios";
 
 export default function Forecast(props) {
-  console.log(props);
   let [forecast, setForecast] = useState(null);
 
   useEffect(() => {
     if (props.coordinates) {
       load();
     }
+    // eslint-disable-next-line
   }, [props.coordinates]);
 
   function handleResponse(response) {
-    console.log(response);
     setForecast(response.data.daily.slice(0, 5));
   }
 
   function load() {
-    console.log(props);
     let lon = props.coordinates.lon;
     let lat = props.coordinates.lat;
     let apiKey = "281450ec88936f4fa8ee9864682b49a0";
     let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=hourly,minutely&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
+
   if (forecast) {
     return (
       <div className="Forecast">
